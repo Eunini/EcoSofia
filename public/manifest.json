@@ -1,0 +1,27 @@
+{
+  "name": "EcoSofia - Природне здоров'я та сучасні рішення",
+  "short_name": "EcoSofia",
+  "description": "Ваш надійний партнер у сфері здоров'я. Кваліфіковані спеціалісти, якісні послуги та екологічні рішення.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E8888A",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "uk",
+  "categories": ["health", "medical", "lifestyle"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

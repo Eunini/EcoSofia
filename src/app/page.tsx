@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { InstagramIcon, TikTokIcon, TelegramSendIcon } from "@/components/icons/SocialIcons"
 import { ChevronLeft, ChevronRight, Search, Globe, X, MapPin, ArrowRight, ShoppingBag, AlignRight, Calendar, Phone } from "lucide-react"
+import JsonLd from "@/components/JsonLd"
 
 const translations = {
   uk: {
@@ -148,6 +149,61 @@ export default function HealthcarePage() {
   const [activeSpecialty, setActiveSpecialty] = useState("gastroenterologist")
   const t = translations[language]
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "EcoSofia",
+    "description": "Ваш надійний партнер у сфері здоров'я. Кваліфіковані спеціалісти, якісні послуги та екологічні рішення.",
+    "url": "https://ecosofia.com",
+    "logo": "https://ecosofia.com/logo.png",
+    "image": "https://ecosofia.com/logo.png",
+    "telephone": "+380123456789",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "UA",
+      "addressLocality": "Київ"
+    },
+    "medicalSpecialty": [
+      "Gastroenterology",
+      "Nutrition",
+      "Dietetics",
+      "Psychotherapy"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Медичні послуги",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Консультація гастроентеролога"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Консультація дієтолога"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure", 
+            "name": "Консультація нутриціолога"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://instagram.com/ecosofia",
+      "https://tiktok.com/@ecosofia",
+      "https://t.me/ecosofia"
+    ]
+  }
+
   const specialties = [
     { id: "gastroenterologist", name: t.gastroenterologist },
     { id: "dietitian", name: t.dietitian },
@@ -171,11 +227,10 @@ export default function HealthcarePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-100 via-rose-50 to-rose-100 relative">
+    <div className="min-h-screen relative" style={{ backgroundColor: '#F1D5C9' }}>
       <header className="flex items-center px-6 py-4">
-        {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-rose-400 rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-[#E8888A] rounded-full flex items-center justify-center">
             <ChevronLeft className="w-4 h-4 text-white" />
           </div>
           <span className="font-semibold text-gray-800 text-lg">{t.health}</span>
@@ -327,11 +382,11 @@ export default function HealthcarePage() {
             {/* Three concentric circles - behind the cards */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
               {/* Outermost circle - largest */}
-              <div className="w-[760px] h-[760px] rounded-full border-2 border-gray-300 bg-transparent flex items-center justify-center">
+              <div className="w-[760px] h-[760px] rounded-full border-2 border-gray-400 bg-transparent flex items-center justify-center">
                 {/* Middle circle - medium */}
-                <div className="w-[660px] h-[660px] rounded-full border-2 border-gray-300 bg-transparent flex items-center justify-center">
+                <div className="w-[660px] h-[660px] rounded-full border-2 border-gray-400 bg-transparent flex items-center justify-center">
                   {/* Inner circle - smallest with text */}
-                  <div className="w-[560px] h-[560px] rounded-full border-2 border-gray-300 flex items-center justify-center">
+                  <div className="w-[560px] h-[560px] rounded-full border-2 border-gray-400 flex items-center justify-center">
                     <h2 className="text-5xl font-bold text-black text-center whitespace-pre-line leading-tight">
                       {t.whyUs}
                     </h2>
@@ -553,6 +608,7 @@ export default function HealthcarePage() {
           </div>
         </div>
       </footer>
+      <JsonLd data={structuredData} />
     </div>
   )
 }
