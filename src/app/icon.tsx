@@ -1,6 +1,8 @@
 import { ImageResponse } from 'next/og'
  
-export function GET() {
+// Remove the named GET export function and use default export instead
+// This avoids the conflict with Next.js's automatically generated GET function
+export default function Icon() {
   return new ImageResponse(
     (
       <div
