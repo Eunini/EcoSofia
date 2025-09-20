@@ -397,8 +397,8 @@ export default function HealthcarePage() {
             </div>
 
             {/* Cards positioned around the circle */}
-            {/* Top left */}
-            <div className="absolute top-0 left-0 w-80 z-10">
+            {/* Top left - right edge just touches innermost circle */}
+            <div className="absolute top-0 left-[calc(50%-410px)] w-80 z-10" style={{ transform: "translateX(-50%)" }}>
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
@@ -414,8 +414,8 @@ export default function HealthcarePage() {
               </Card>
             </div>
 
-            {/* Top right */}
-            <div className="absolute top-0 right-0 w-80 z-10">
+            {/* Top right - left edge just touches innermost circle */}
+            <div className="absolute top-0 right-[calc(50%-410px)] w-80 z-10" style={{ transform: "translateX(50%)" }}>
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
@@ -431,8 +431,8 @@ export default function HealthcarePage() {
               </Card>
             </div>
 
-            {/* Bottom left */}
-            <div className="absolute bottom-0 left-0 w-80 z-10">
+            {/* Bottom left - right edge just touches innermost circle */}
+            <div className="absolute bottom-0 left-[calc(50%-410px)] w-80 z-10" style={{ transform: "translateX(-50%)" }}>
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
@@ -448,8 +448,8 @@ export default function HealthcarePage() {
               </Card>
             </div>
 
-            {/* Bottom right */}
-            <div className="absolute bottom-0 right-0 w-80 z-10">
+            {/* Bottom right - left edge just touches innermost circle */}
+            <div className="absolute bottom-0 right-[calc(50%-410px)] w-80 z-10" style={{ transform: "translateX(50%)" }}>
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
