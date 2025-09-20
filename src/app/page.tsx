@@ -493,7 +493,7 @@ export default function HealthcarePage() {
           </div>
 
           {/* Doctor cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((index) => {
               const doctor = doctors[activeSpecialty as keyof typeof doctors]
               return (
@@ -510,7 +510,7 @@ export default function HealthcarePage() {
                   <CardContent className="py-6 px-6 pb-0">
                     <div className="text-center">
                       <div className="mb-3">
-                        <h3 className="font-semibold text-black text-2xl">{doctor.name}</h3>
+                        <h3 className=" text-black text-2xl">{doctor.name}</h3>
                         <p className="text-lg text-black/60 mt-1 py-2">{doctor.title}</p>
                         <p className="text-sm text-gray-500 py-3">
                           {index === 1 ? "Спеціалізується на діагностиці та лікуванні захворювань..." :
