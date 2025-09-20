@@ -349,9 +349,9 @@ export default function HealthcarePage() {
               <h3 className="text-md font-medium text-black">{t.ourServices}</h3>
               <div className="space-y-3">
                 {[
-                  { icon: <Image src="/Знімок екрана 2025-09-07 132158 3.png" alt="Icon" width={40} height={40} className="w-10 h-10" />, text: t.cashback },
-                  { icon: <Image src="/Знімок екрана 2025-09-07 132158 3.png" alt="Icon" width={20} height={20} className="w-10 h-10" />, text: t.servicesText },
-                  { icon: <Image src="/Знімок екрана 2025-09-07 132158 3.png" alt="Icon" width={20} height={20} className="w-10 h-10" />, text: t.consultations },
+                  { icon: <Image src="/leaf.png" alt="Icon" width={40} height={40} className="w-10 h-10" />, text: t.cashback },
+                  { icon: <Image src="/leaf.png" alt="Icon" width={20} height={20} className="w-10 h-10" />, text: t.servicesText },
+                  { icon: <Image src="/leaf.png" alt="Icon" width={20} height={20} className="w-10 h-10" />, text: t.consultations },
                 ].map((service, index) => (
                   <div
                     key={index}
@@ -402,7 +402,7 @@ export default function HealthcarePage() {
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-semibold text-black whitespace-pre-line leading-tight">
+                    <h3 className="text-2xl pb-3 font-semibold text-black whitespace-pre-line leading-tight">
                       {t.qualifiedSpecialists}
                     </h3>
                     <Badge className="text-black sm:text-lg text-md">
@@ -419,7 +419,7 @@ export default function HealthcarePage() {
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-semibold text-gray-800 whitespace-pre-line leading-tight">
+                    <h3 className="text-2xl pb-3 font-semibold text-gray-800 whitespace-pre-line leading-tight">
                       {t.trustPartnership}
                     </h3>
                     <Badge className="text-black sm:text-lg text-md">
@@ -436,7 +436,7 @@ export default function HealthcarePage() {
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-semibold text-gray-800 whitespace-pre-line leading-tight">
+                    <h3 className="text-2xl pb-3 font-semibold text-gray-800 whitespace-pre-line leading-tight">
                       {t.serviceQuality}
                     </h3>
                     <Badge className="text-black sm:text-lg text-md">
@@ -453,7 +453,7 @@ export default function HealthcarePage() {
               <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="sm:px-12 sm:py-10 px-10 py-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-semibold text-gray-800 whitespace-pre-line leading-tight">
+                    <h3 className="text-2xl font-semibold text-gray-800 whitespace-pre-line leading-tight pb-3">
                       {t.responsibility}
                     </h3>
                     <Badge className="text-black sm:text-lg text-md">
@@ -573,7 +573,7 @@ export default function HealthcarePage() {
       </section>
       </div>
 
-      <footer className="bg-[#0F0504]py-12 w-full">
+      <footer className="bg-[#0F0504] py-12 w-full">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex flex-col items-center gap-3">
@@ -583,7 +583,7 @@ export default function HealthcarePage() {
                   alt="EcoSofia Logo"
                   width={68}
                   height={68}
-                  className="w-26 h-22 object-contain"
+                  className="w-46 h-42 object-contain"
                 />
               </div>
               <div className="text-center text-lg text-white">{t.copyright}</div>
