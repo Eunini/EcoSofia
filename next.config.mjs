@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // Use standalone output
+  // Remove 'standalone' output for better Vercel compatibility
   reactStrictMode: true,
-  outputFileTracingRoot: "C:\\Users\\HP\\medicare-ukrain", // Fix workspace root warning
+  // Remove the absolute path outputFileTracingRoot for Vercel deployment
   images: {
     domains: [],
     remotePatterns: [
